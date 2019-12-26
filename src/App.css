@@ -7,8 +7,35 @@
   border: blue 1px dashed;
 }
 
-img {
+img.parallaximage {
   width: 100%;
 }
 
+.contact-container {
+  position: relative;
+  height: 90vh;
+}
+
+.contact-image {
+  position: absolute;
+  width: 100%;
+}
+
+.contact-text {
+  position: absolute;
+  top: 10vh;
+  left: 60%;
+  width: 40%;
+  color: white;
+  font-size: 1vw;
+}
+
+.contact-info {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: .85vw;
+  vertical-align: middle;
+}
 

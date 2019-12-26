@@ -32,6 +32,9 @@ $bodyfont: 'PT Serif', serif;
   font-family: "Didact Gothic", sans-serif;
   font-weight: bold;
 }
+.section li {
+  font-family: "Merriweather", serif;
+}
 
 #toc-wrapper {
   position: fixed;

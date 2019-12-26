@@ -52,6 +52,10 @@ $alternatecolor2: $color1;
         font-family: $headingfont;
         font-weight: bold;
     }
+
+    li {
+        font-family: $bodyfont;
+    }
 }
 
 #toc-wrapper {
@@ -70,4 +74,6 @@ h2 {
 h3 { 
     font-size: 18pt;
 }
+
+
 
