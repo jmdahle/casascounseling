@@ -1,0 +1,53 @@
+/* Fonts */
+/* alternative body fonts */
+/*
+$bodyfont: 'Dosis', sans-serif;
+$bodyfont: 'PT Serif', serif;
+*/
+/* RGB */
+/* Color Assignments */
+.table-of-contents a {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: bold;
+}
+.table-of-contents a:link, .table-of-contents a:visited, .table-of-contents a:active {
+  color: #3f7cac;
+}
+.table-of-contents a.active {
+  font-weight: bold;
+  padding-left: 14px;
+  border-left: 2px solid #be6e46;
+}
+.table-of-contents a:hover {
+  color: #be6e46;
+  padding-left: 15px;
+  border-left: 1px solid #3f7cac;
+}
+
+.section p {
+  font-family: "Merriweather", serif;
+  font-size: 120%;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: bold;
+}
+
+#toc-wrapper {
+  position: fixed;
+  top: 0px;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+/*# sourceMappingURL=style.css.map */

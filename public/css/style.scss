@@ -1,0 +1,73 @@
+/* Fonts */
+$bodyfont: 'Merriweather', serif;
+/* alternative body fonts */
+/*
+$bodyfont: 'Dosis', sans-serif;
+$bodyfont: 'PT Serif', serif;
+*/
+$headingfont: 'Didact Gothic', sans-serif;
+
+/* RGB */
+$color0: rgba(0,0,0,1);
+$color1: rgba(190, 110, 70, 1);
+$color2: rgba(209, 239, 181, 1);
+$color3: rgba(114, 134, 160, 1);
+$color4: rgba(63, 124, 172, 1);
+$color5: rgba(149, 175, 186, 1);
+/* Color Assignments */
+$primarycolor: $color0;
+$alternatecolor1: $color4;
+$alternatecolor2: $color1;
+
+.table-of-contents {
+    a {
+        font-family: $headingfont;
+        font-weight: bold;    
+    }
+
+    a:link, a:visited, a:active {
+        color: $alternatecolor1;
+    }
+
+    a.active {
+        font-weight: bold;
+        padding-left: 14px;
+        border-left: 2px solid $alternatecolor2;
+    }
+
+    a:hover {
+        color: $alternatecolor2;
+        padding-left: 15px;
+        border-left: 1px solid $alternatecolor1;            
+    }
+}
+
+.section {
+    p {
+        font-family: $bodyfont;
+        font-size: 120%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $headingfont;
+        font-weight: bold;
+    }
+}
+
+#toc-wrapper {
+    position: fixed;
+    top: 0px;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+h3 { 
+    font-size: 18pt;
+}
+
