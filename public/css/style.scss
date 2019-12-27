@@ -1,11 +1,14 @@
 /* Fonts */
 $bodyfont: 'Merriweather', serif;
-/* alternative body fonts */
+/* alternative  fonts */
 /*
 $bodyfont: 'Dosis', sans-serif;
 $bodyfont: 'PT Serif', serif;
+$headingfont: 'Rubik', sans-serif;
+$headingfont: 'Dosis', sans-serif;
 */
-$headingfont: 'Didact Gothic', sans-serif;
+$headingfont: 'Rubik', sans-serif;
+$navigationfont: 'Didact Gothic', sans-serif;
 
 /* RGB */
 $color0: rgba(0,0,0,1);
@@ -15,37 +18,56 @@ $color3: rgba(114, 134, 160, 1);
 $color4: rgba(63, 124, 172, 1);
 $color5: rgba(149, 175, 186, 1);
 /* Color Assignments */
-$primarycolor: $color0;
-$alternatecolor1: $color4;
-$alternatecolor2: $color1;
+$textcolor: $color0;
+$primary-color: $color4 !default;
+$secondary-color: $color1 !default;
+$alternate-bgcolor: $color2;
 
+.row .col {
+    padding-left: 0px;
+}
+
+.parallax-interior {
+    font-family: $bodyfont;
+    font-size: 1.6em;
+    position: absolute;
+    bottom: 100px;
+    padding-left: 40px;
+    color: white;
+
+    .btn {
+        font-family: $navigationfont;
+        background-color: $secondary-color;
+    }
+}
 .table-of-contents {
     a {
-        font-family: $headingfont;
+        font-family: $navigationfont;
         font-weight: bold;    
     }
 
     a:link, a:visited, a:active {
-        color: $alternatecolor1;
+        color: $primary-color;
     }
 
     a.active {
         font-weight: bold;
         padding-left: 14px;
-        border-left: 2px solid $alternatecolor2;
+        border-left: 2px solid $secondary-color;
     }
 
     a:hover {
-        color: $alternatecolor2;
+        color: $secondary-color;
         padding-left: 15px;
-        border-left: 1px solid $alternatecolor1;            
+        border-left: 1px solid $primary-color;            
     }
 }
 
 .section {
+    padding: 10px;
     p {
         font-family: $bodyfont;
-        font-size: 120%;
+        font-size: 1.2em;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -55,12 +77,13 @@ $alternatecolor2: $color1;
 
     li {
         font-family: $bodyfont;
+        vertical-align: middle;
     }
 }
 
 #toc-wrapper {
     position: fixed;
-    top: 0px;
+    top: 20px;
 }
 
 h1 {
@@ -75,5 +98,57 @@ h3 {
     font-size: 18pt;
 }
 
+.header-wrapper {
+    background-color: $primary-color;
+    font-family: $navigationfont;
+    color: white;
+    text-align: right;
+    padding: 4px;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    i {
+        vertical-align: -6px;
+    }
+}
 
+.contact-container {
+    position: relative;
+    height: 90vh;
+}
+  
+.contact-image {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+}
+  
+.contact-text {
+    position: absolute;
+    top: 10vh;
+    left: 60%;
+    width: 40%;
+    color: white;
+    font-size: 1vw;
+}
+  
+.contact-info {
+    font-family: $bodyfont;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 1.4em;
+}
 
+.bg-alt {
+    background-color: $alternate-bgcolor;
+}
+
+.contact-form, .contact-direct {
+    padding: 10px;
+}
+
+.parallaximage {
+    width: 100%;
+}

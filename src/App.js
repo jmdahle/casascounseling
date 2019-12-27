@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import ContactForm from './ContactForm';
 
 class App extends React.Component {
     render () {
@@ -21,21 +22,25 @@ class App extends React.Component {
             ]
         return (
             <div className='pagecontainer'>
-                <header className='row'>
-                    <div className='col s12 m12 l12 testborder'>
-                        <section id='welcome'>
-                            <h1>Welcome</h1>
-                        </section>
-                    </div>
+                <header className='header-wrapper'>
+                    <i className='material-icons'>phone</i>&nbsp;888-888-8888
+                    &nbsp;|&nbsp;
+                    <i className='material-icons'>mail</i>&nbsp;paula@casascounseling.com
                 </header>
-                <div className='row'>
+                <main className='row'>
                     <div className='col s12 m9 l10'>
                         <div className='parallax-container'>
+                            <div className='parallax-interior'>
+                                <p>
+                                    Say something really profound. And then contact us button.
+                                </p>
+                                <a className='btn'>Contact</a>
+                            </div>
                             <div className='parallax'>
                                 <img className='parallaximage' src='images/spiral-green-plants-1650921.jpg'/>
                             </div>
                         </div>
-                        <PageSection name='about' title='About'>
+                        <PageSection name='about' title=''>
                             <p>
                                 All of life is a precious whole: Loss and suffering are as much a part of the human experience as are joy and connection. I believe that our moments of greatest vulnerability and despair can be powerful opportunities for change, allowing us to heal past wounds and accept ourselves and what life brings us. As a therapist I seek to accompany you on life's journey with respect and empathic listening, honoring and understanding your life stories and the meaning those experiences hold for you. My practice focuses on helping people lead more authentic, fulfilling lives, no matter the age.
                             </p>
@@ -53,29 +58,29 @@ class App extends React.Component {
                         </div>
                         <PageSection name='contact' title='Contact'>
                             <div className='row'>
-                                <div className='col s12 m6 l6 contact-container'>
+                                <div className='col s12 m7 l7 contact-container'>
                                     <img src='images/pcasas-hs1.jpg' className='contact-image'/>
                                     <div className='contact-text'>
                                         <p>I support people through life transitions and challenges.</p>
                                     </div>
                                     <div className='contact-info'>
+                                            Paula Casas, LCSW
+                                    </div>
+                                </div>
+                                <div className='col s12 m5 l5 bg-alt'>
+                                    <div className='contact-direct'>
+                                        <h3>Contact directly by phone or email</h3>
                                         <ul>
                                             <li>
-                                                <i class=" material-icons">phone</i>
+                                                <i className='material-icons'>phone</i>
                                                 &nbsp;888-888-8888
                                             </li>
                                             <li>
-                                                <i class=" material-icons">mail</i>
+                                                <i className='material-icons'>mail</i>
                                                 &nbsp;paula@casascounseling.com
                                             </li>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div className='col s12 m6 l6 testborder'>
-                                    <form>
-                                        <h3>Contact Us</h3>
-                                        <p>Insert form here.</p>
-                                    </form>
+                                    </div>                                    <ContactForm />
                                 </div>
                             </div>
                         </PageSection>
@@ -86,29 +91,28 @@ class App extends React.Component {
                         </div>
                         <PageSection name='specialties' title='Specialties'>
                             <div className='row'>
-                                <div className='col s12 m6 l6 testborder'>
+                                <div className='col s12 m6 l6'>
                                     <h3>Grief and Loss</h3>
                                 </div>
-                                <div className='col s12 m6 l6 testborder'>
+                                <div className='col s12 m6 l6'>
                                     <h3>Perinatal mood disorders</h3>
                                 </div>
-                                <div className='col s12 m6 l6 testborder'>
+                                <div className='col s12 m6 l6'>
                                     <h3>Parenting issues</h3>
                                 </div>
-                                <div className='col s12 m6 l6 testborder'>
+                                <div className='col s12 m6 l6'>
                                     <h3>Generalized anxiety or depression</h3>
                                 </div>
                             </div>
                         </PageSection>
-                        <PageSection name='test' title='Test Title'>
-                            <p>Yeah, this is good text</p><p>And more...</p>
-                        </PageSection>
-
                     </div>
                     <div id='nav-container' className='col hide-on-small-only m3 l2'>
                         < Nav menuitems={sections} />
                     </div>
-                </div>
+                </main>
+                <footer className='footer-wrapper'>
+
+                </footer>
             </div>
         );
     }
@@ -143,6 +147,5 @@ const PageSection = (props) => {
         </div>
     )
 }
-
 
 export default App;

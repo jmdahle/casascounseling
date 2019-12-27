@@ -1,11 +1,30 @@
 /* Fonts */
-/* alternative body fonts */
+/* alternative  fonts */
 /*
 $bodyfont: 'Dosis', sans-serif;
 $bodyfont: 'PT Serif', serif;
+$headingfont: 'Rubik', sans-serif;
+$headingfont: 'Dosis', sans-serif;
 */
 /* RGB */
 /* Color Assignments */
+.row .col {
+  padding-left: 0px;
+}
+
+.parallax-interior {
+  font-family: "Merriweather", serif;
+  font-size: 1.6em;
+  position: absolute;
+  bottom: 100px;
+  padding-left: 40px;
+  color: white;
+}
+.parallax-interior .btn {
+  font-family: "Didact Gothic", sans-serif;
+  background-color: #be6e46;
+}
+
 .table-of-contents a {
   font-family: "Didact Gothic", sans-serif;
   font-weight: bold;
@@ -24,21 +43,25 @@ $bodyfont: 'PT Serif', serif;
   border-left: 1px solid #3f7cac;
 }
 
+.section {
+  padding: 10px;
+}
 .section p {
   font-family: "Merriweather", serif;
-  font-size: 120%;
+  font-size: 1.2em;
 }
 .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-  font-family: "Didact Gothic", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: bold;
 }
 .section li {
   font-family: "Merriweather", serif;
+  vertical-align: middle;
 }
 
 #toc-wrapper {
   position: fixed;
-  top: 0px;
+  top: 20px;
 }
 
 h1 {
@@ -51,6 +74,61 @@ h2 {
 
 h3 {
   font-size: 18pt;
+}
+
+.header-wrapper {
+  background-color: #3f7cac;
+  font-family: "Didact Gothic", sans-serif;
+  color: white;
+  text-align: right;
+  padding: 4px;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+.header-wrapper i {
+  vertical-align: -6px;
+}
+
+.contact-container {
+  position: relative;
+  height: 90vh;
+}
+
+.contact-image {
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact-text {
+  position: absolute;
+  top: 10vh;
+  left: 60%;
+  width: 40%;
+  color: white;
+  font-size: 1vw;
+}
+
+.contact-info {
+  font-family: "Merriweather", serif;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-size: 1.4em;
+}
+
+.bg-alt {
+  background-color: #d1efb5;
+}
+
+.contact-form, .contact-direct {
+  padding: 10px;
+}
+
+.parallaximage {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
