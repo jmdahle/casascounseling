@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import ContactForm from './ContactForm';
 
@@ -22,10 +21,12 @@ class App extends React.Component {
             ]
         return (
             <div className='pagecontainer'>
-                <header className='header-wrapper'>
+                <header>
                     <i className='material-icons'>phone</i>&nbsp;888-888-8888
                     &nbsp;|&nbsp;
                     <i className='material-icons'>mail</i>&nbsp;paula@casascounseling.com
+                    &nbsp;|&nbsp;
+                    <a href='#'>client login</a>
                 </header>
                 <main className='row'>
                     <div className='col s12 m9 l10'>
@@ -106,7 +107,8 @@ class App extends React.Component {
                             </div>
                         </PageSection>
                     </div>
-                    <div id='nav-container' className='col hide-on-small-only m3 l2'>
+                    <div id='sidebar-container' className='col hide-on-small-only m3 l2'>
+                        <img className='' src='images/casas_counseling_logo.png'/>
                         < Nav menuitems={sections} />
                     </div>
                 </main>

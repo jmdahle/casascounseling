@@ -13,18 +13,55 @@ $navigationfont: 'Didact Gothic', sans-serif;
 /* RGB */
 $color0: rgba(0,0,0,1);
 $color1: rgba(190, 110, 70, 1);
-$color2: rgba(209, 239, 181, 1);
+$color2: rgba(209, 239, 181, 1); /* hex: #d1efb5 */
 $color3: rgba(114, 134, 160, 1);
-$color4: rgba(63, 124, 172, 1);
+$color4: rgba(63, 124, 172, 1); /* hex: #3f7cac */
 $color5: rgba(149, 175, 186, 1);
 /* Color Assignments */
 $textcolor: $color0;
 $primary-color: $color4 !default;
 $secondary-color: $color1 !default;
+$alternate-primary-color: $color2;
+$alternate-secondary-color: $color1;
 $alternate-bgcolor: $color2;
 
-.row .col {
-    padding-left: 0px;
+header {
+    background-color: $primary-color;
+    font-family: $navigationfont;
+    color: white;
+    text-align: right;
+    padding: 4px;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    
+    i {
+        vertical-align: -6px;
+    }
+
+    a {
+        font-family: $navigationfont;
+        font-weight: bold;    
+    }
+
+    a:link, a:visited, a:active {
+        color: $alternate-primary-color;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#sidebar-container {
+    img {
+        width: 100%;
+    }
+    
+    #toc-wrapper {
+        position: fixed;
+        top: 20px;
+    }
 }
 
 .parallax-interior {
@@ -40,6 +77,7 @@ $alternate-bgcolor: $color2;
         background-color: $secondary-color;
     }
 }
+
 .table-of-contents {
     a {
         font-family: $navigationfont;
@@ -81,11 +119,6 @@ $alternate-bgcolor: $color2;
     }
 }
 
-#toc-wrapper {
-    position: fixed;
-    top: 20px;
-}
-
 h1 {
     font-size: 30pt;
 }
@@ -98,19 +131,7 @@ h3 {
     font-size: 18pt;
 }
 
-.header-wrapper {
-    background-color: $primary-color;
-    font-family: $navigationfont;
-    color: white;
-    text-align: right;
-    padding: 4px;
-    position: fixed;
-    width: 100%;
-    z-index: 50;
-    i {
-        vertical-align: -6px;
-    }
-}
+
 
 .contact-container {
     position: relative;
