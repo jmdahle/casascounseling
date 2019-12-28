@@ -25,18 +25,37 @@ $alternate-primary-color: $color2;
 $alternate-secondary-color: $color1;
 $alternate-bgcolor: $color2;
 
+$h1-font-size: 30pt;
+$hx-font-size-xdiff: 6pt;
+
+$banner-padding: 4px;
+
 header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+    z-index: 50;
+}
+
+main {
+    position: relative;
+    top: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+}
+
+#banner-container {
     background-color: $primary-color;
     font-family: $navigationfont;
     color: white;
     text-align: right;
-    padding: 4px;
-    position: fixed;
-    width: 100%;
-    z-index: 50;
-    
+    padding-top: $banner-padding;
+    padding-bottom: $banner-padding;
+    padding-left: 2 * $banner-padding;
+    padding-right: 2 * $banner-padding;
+    height: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+
     i {
-        vertical-align: -6px;
+        vertical-align: -3px;
     }
 
     a {
@@ -57,11 +76,11 @@ header {
     img {
         width: 100%;
     }
-    
-    #toc-wrapper {
-        position: fixed;
-        top: 20px;
-    }
+
+    // #toc-wrapper {
+    //     position: fixed;
+    //     top: 20px;
+    // }
 }
 
 .parallax-interior {
@@ -120,18 +139,16 @@ header {
 }
 
 h1 {
-    font-size: 30pt;
+    font-size: $h1-font-size;
 }
 
 h2 {
-    font-size: 24pt;
+    font-size: $h1-font-size - $hx-font-size-xdiff;
 }
 
 h3 { 
-    font-size: 18pt;
+    font-size: $h1-font-size - 2 * $hx-font-size-xdiff;
 }
-
-
 
 .contact-container {
     position: relative;
@@ -172,4 +189,19 @@ h3 {
 
 .parallaximage {
     width: 100%;
+}
+
+// Class for when element is above threshold
+.pin-top {
+    position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+    position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+    position: fixed !important;
 }

@@ -6,3 +6,7 @@
 .testborder {
   border: blue 1px dashed;
 }
+
+#spacer {
+  background-color: bisque;
+}
