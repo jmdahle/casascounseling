@@ -10,6 +10,26 @@ $headingfont: 'Dosis', sans-serif;
 /* hex: #d1efb5 */
 /* hex: #3f7cac */
 /* Color Assignments */
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.col {
+  padding: 0px;
+  margin: 0px;
+}
+
+.row .col {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col .row {
+  padding: 0px;
+  margin: 0px;
+}
+
 header {
   position: fixed;
   top: 0px;
@@ -23,9 +43,14 @@ main {
   top: 30pt;
 }
 
+footer {
+  font-family: "Didact Gothic", sans-serif;
+}
+
 #banner-container {
   background-color: #3f7cac;
   font-family: "Didact Gothic", sans-serif;
+  font-size: 0.75rem;
   color: white;
   text-align: right;
   padding-top: 4px;
@@ -48,8 +73,48 @@ main {
   text-decoration: underline;
 }
 
+#sidebar-container {
+  padding-left: 10px;
+}
 #sidebar-container img {
   width: 100%;
+  max-width: 220px;
+}
+
+#about-left {
+  background-color: rgba(149, 175, 186, 0.65);
+  padding: 14px;
+  line-height: 1.5;
+}
+#about-left p {
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+#about-right {
+  background-color: #95afba;
+  justify-content: center;
+  position: relative;
+}
+#about-right img {
+  width: 85%;
+  object-fit: cover;
+  padding: 10px;
+}
+#about-right p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+
+#contact-left {
+  background-color: rgba(209, 239, 181, 0.65);
+}
+
+#contact-right {
+  background-color: #d1efb5;
 }
 
 .parallax-interior {
@@ -67,6 +132,7 @@ main {
 
 .table-of-contents a {
   font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
   font-weight: bold;
 }
 .table-of-contents a:link, .table-of-contents a:visited, .table-of-contents a:active {
@@ -84,11 +150,11 @@ main {
 }
 
 .section {
-  padding: 10px;
+  padding: 0px;
 }
 .section p {
   font-family: "Merriweather", serif;
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
   font-family: "Rubik", sans-serif;
@@ -97,6 +163,11 @@ main {
 .section li {
   font-family: "Merriweather", serif;
   vertical-align: middle;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -114,12 +185,6 @@ h3 {
 .contact-container {
   position: relative;
   height: 90vh;
-}
-
-.contact-image {
-  position: absolute;
-  padding: 10px;
-  width: 100%;
 }
 
 .contact-text {
@@ -140,23 +205,16 @@ h3 {
   font-size: 1.4em;
 }
 
-.bg-alt {
-  background-color: #d1efb5;
-}
-
 .contact-form, .contact-direct {
   padding: 10px;
 }
 
 .parallaximage {
   width: 100%;
+  object-fit: cover;
 }
 
-.pin-top {
-  position: relative;
-}
-
-.pin-bottom {
+.pin-top, .pin-bottom {
   position: relative;
 }
 

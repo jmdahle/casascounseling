@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+// import {BrowserRouter as Router, Link} from 'react-router-dom';
 import './App.css';
 import ContactForm from './ContactForm';
 
@@ -25,7 +25,7 @@ class App extends React.Component {
                     <div id='banner-container'>
                         <i className='tiny material-icons'>phone</i>&nbsp;888-888-8888&nbsp;|&nbsp;
                         <i className='tiny material-icons'>mail</i>&nbsp;paula@casascounseling.com&nbsp;|&nbsp;
-                        <a href='#'>client login</a>&nbsp;
+                        <a href='#!'>client login</a>&nbsp;
                     </div>
                 </header>
                 <main>
@@ -39,41 +39,40 @@ class App extends React.Component {
                                     <p>
                                         Say something really profound. And then contact us button.
                                     </p>
-                                    <a className='btn'>Contact</a>
+                                    <a href='#!' className='btn'>Contact</a>
                                 </div>
                                 <div className='parallax'>
-                                    <img className='parallaximage' src='images/spiral-green-plants-1650921.jpg'/>
+                                    <img className='parallaximage' src='images/spiral-green-plants-1650921.jpg' alt=''/>
                                 </div>
                             </div>
                             <PageSection name='about' title=''>
-                                <p>
-                                    All of life is a precious whole: Loss and suffering are as much a part of the human experience as are joy and connection. I believe that our moments of greatest vulnerability and despair can be powerful opportunities for change, allowing us to heal past wounds and accept ourselves and what life brings us. As a therapist I seek to accompany you on life's journey with respect and empathic listening, honoring and understanding your life stories and the meaning those experiences hold for you. My practice focuses on helping people lead more authentic, fulfilling lives, no matter the age.
-                                </p>
-                                <p>
-                                    I specialize in helping people cope with loss. Whether you're grieving a loved one or lost relationship, struggling with a miscarriage or postpartum blues, or mourning a decline in your own health, I can help you move through the experience. I support people through life transitions and parenting challenges.
-                                </p>
-                                <p>
-                                    I often use guided meditation and mindfulness-based activities to help clients connect more fully with their emotions and body. I am fluent in Spanish and am familiar with many cultural backgrounds. I practice at the Willow Wellness Center, which specializes in deep healing and graceful living for adults.
-                                </p>
+                                <div className='row flex'>
+                                    <div id='about-left' className='col s12 m6 l7'>
+                                        <p>
+                                            All of life is a precious whole: Loss and suffering are as much a part of the human experience as are joy and connection. I believe that our moments of greatest vulnerability and despair can be powerful opportunities for change, allowing us to heal past wounds and accept ourselves and what life brings us. As a therapist I seek to accompany you on life's journey with respect and empathic listening, honoring and understanding your life stories and the meaning those experiences hold for you. My practice focuses on helping people lead more authentic, fulfilling lives, no matter the age.
+                                        </p>
+                                        <p>
+                                            I specialize in helping people cope with loss. Whether you're grieving a loved one or lost relationship, struggling with a miscarriage or postpartum blues, or mourning a decline in your own health, I can help you move through the experience. I support people through life transitions and parenting challenges.
+                                        </p>
+                                        <p>
+                                            I often use guided meditation and mindfulness-based activities to help clients connect more fully with their emotions and body. I am fluent in Spanish and am familiar with many cultural backgrounds. I practice at the Willow Wellness Center, which specializes in deep healing and graceful living for adults.
+                                        </p>
+                                    </div>
+                                    <div id='about-right' className='col s12 m6 l5 valign-wrapper'>
+                                        <img src='images/pcasas-hs1.jpg' alt=''/>
+                                        <p>Paula Casas, LCSW</p>
+                                    </div>
+                                </div>
                             </PageSection>
                             <div className='parallax-container'>
                                 <div className='parallax'>
-                                    <img className='parallaximage' src='images/woman-raising-her-both-hands-1786244.jpg'/>
+                                    <img className='parallaximage' src='images/woman-raising-her-both-hands-1786244.jpg' alt=''/>
                                 </div>
                             </div>
-                            <PageSection name='contact' title='Contact'>
-                                <div className='row'>
-                                    <div className='col s12 m7 l7 contact-container'>
-                                        <img src='images/pcasas-hs1.jpg' className='contact-image'/>
-                                        <div className='contact-text'>
-                                            <p>I support people through life transitions and challenges.</p>
-                                        </div>
-                                        <div className='contact-info'>
-                                                Paula Casas, LCSW
-                                        </div>
-                                    </div>
-                                    <div className='col s12 m5 l5 bg-alt'>
-                                        <div className='contact-direct'>
+                            <PageSection name='contact' title=''>
+                                <div className='row flex'>
+                                    <div id='contact-left' className='col s12 m5 l5 contact-container'>
+                                    <div className='contact-direct'>
                                             <h3>Contact directly by phone or email</h3>
                                             <ul>
                                                 <li>
@@ -85,13 +84,16 @@ class App extends React.Component {
                                                     &nbsp;paula@casascounseling.com
                                                 </li>
                                             </ul>
-                                        </div>                                    <ContactForm />
+                                        </div>
+                                    </div>
+                                    <div id='contact-right' className='col s12 m7 l7'>
+                                        <ContactForm />
                                     </div>
                                 </div>
                             </PageSection>
                             <div className='parallax-container'>
                                 <div className='parallax'>
-                                    <img className='parallaximage' src='images/gen1.jpg'/>
+                                    <img className='parallaximage' src='images/gen1.jpg' alt=''/>
                                 </div>
                             </div>
                             <PageSection name='specialties' title='Specialties'>
@@ -112,9 +114,12 @@ class App extends React.Component {
                             </PageSection>
                         </div>
                         <div id='sidebar-container' className='col hide-on-small-only m3 l2'>
-                            <div className='pushpin' data-target='sidebar-container'>
-                                <img className='' src='images/casas_counseling_logo.png'/>
-                                < Nav menuitems={sections} />
+                            <div id='sticky-container'>
+                                <p>spacer</p>
+                                <div id='sticky' className='pushpin'>
+                                    <img className='' src='images/casas_counseling_logo.png' alt=''/>
+                                    < Nav menuitems={sections} />
+                                </div>
                             </div>
                         </div>
                     </div>

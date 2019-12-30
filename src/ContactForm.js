@@ -8,7 +8,7 @@ class ContactForm extends React.Component {
             name: '',
             email: '',
             message: '',
-            insurance: '',
+            //insurance: '',
         }
 
         this.state = this.initialState;
@@ -22,7 +22,7 @@ class ContactForm extends React.Component {
     }
 
     render () {
-        const { name, email, message, insurance } = this.state;
+        const { name, email, message, /*insurance*/ } = this.state;
 
         return (
             <div className='contact-form'>

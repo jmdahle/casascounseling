@@ -10,3 +10,13 @@
 #spacer {
   background-color: bisque;
 }
+
+#debug {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  width: 200px;
+  min-height: 1rem;
+  background-color: pink;
+  border: 1px red dashed;
+}
