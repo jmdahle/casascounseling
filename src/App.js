@@ -47,7 +47,7 @@ class App extends React.Component {
                             </div>
                             <PageSection name='about' title=''>
                                 <div className='row flex'>
-                                    <div id='about-left' className='col s12 m6 l7'>
+                                    <div id='about-left' className='col s12 m12 l7'>
                                         <p>
                                             All of life is a precious whole: Loss and suffering are as much a part of the human experience as are joy and connection. I believe that our moments of greatest vulnerability and despair can be powerful opportunities for change, allowing us to heal past wounds and accept ourselves and what life brings us. As a therapist I seek to accompany you on life's journey with respect and empathic listening, honoring and understanding your life stories and the meaning those experiences hold for you. My practice focuses on helping people lead more authentic, fulfilling lives, no matter the age.
                                         </p>
@@ -58,7 +58,7 @@ class App extends React.Component {
                                             I often use guided meditation and mindfulness-based activities to help clients connect more fully with their emotions and body. I am fluent in Spanish and am familiar with many cultural backgrounds. I practice at the Willow Wellness Center, which specializes in deep healing and graceful living for adults.
                                         </p>
                                     </div>
-                                    <div id='about-right' className='col s12 m6 l5 valign-wrapper'>
+                                    <div id='about-right' className='col s12 m12 l5 valign-wrapper'>
                                         <img src='images/pcasas-hs1.jpg' alt=''/>
                                         <p>Paula Casas, LCSW</p>
                                     </div>
@@ -98,22 +98,22 @@ class App extends React.Component {
                             </div>
                             <PageSection name='specialties' title='Specialties'>
                                 <div className='row'>
-                                    <div className='col s12 m6 l6'>
-                                        <h3>Grief and Loss</h3>
-                                    </div>
-                                    <div className='col s12 m6 l6'>
-                                        <h3>Perinatal mood disorders</h3>
-                                    </div>
-                                    <div className='col s12 m6 l6'>
-                                        <h3>Parenting issues</h3>
-                                    </div>
-                                    <div className='col s12 m6 l6'>
-                                        <h3>Generalized anxiety or depression</h3>
-                                    </div>
+                                    <SpecialtyCard name='grief_and_loss' title='Grief and Loss'>
+                                        content
+                                    </SpecialtyCard>
+                                    <SpecialtyCard name='perinatal_mood_disorders' title='Perinatal Mood Disorders'>
+                                        content
+                                    </SpecialtyCard>
+                                    <SpecialtyCard name='parenting_issues' title='Parenting Issues'>
+                                        content
+                                    </SpecialtyCard>
+                                    <SpecialtyCard name='anxiety_or_depression' title='Generalized Anxiety or Depression'>
+                                        content
+                                    </SpecialtyCard>
                                 </div>
                             </PageSection>
                         </div>
-                        <div id='sidebar-container' className='col hide-on-small-only m3 l2'>
+                        <div id='sidebar-container' className='col hide-on-small-only l2'>
                             <div id='sticky-container'>
                                 <p>spacer</p>
                                 <div id='sticky' className='pushpin'>
@@ -157,6 +157,21 @@ const PageSection = (props) => {
             </h2>
             <div>
                 {props.children}
+            </div>
+        </div>
+    )
+}
+
+const SpecialtyCard = (props) => {
+    return (
+            <div className='col s12 m6 l6'>
+            <div id={props.name} className='specialty-card'>
+                <h2>
+                    {props.title}
+                </h2>
+                <div>
+                    {props.children}
+                </div>
             </div>
         </div>
     )
