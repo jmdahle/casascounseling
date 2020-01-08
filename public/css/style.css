@@ -44,6 +44,8 @@ main {
 }
 
 footer {
+  position: relative;
+  margin-top: 30pt;
   font-family: "Didact Gothic", sans-serif;
 }
 
@@ -100,7 +102,7 @@ footer {
 #about-right img {
   width: 85%;
   object-fit: cover;
-  padding: 10px;
+  padding: 5px;
 }
 #about-right p {
   position: absolute;
@@ -115,19 +117,86 @@ footer {
 
 #contact-right {
   background-color: #d1efb5;
+  position: relative;
+  padding-bottom: 10px;
+}
+#contact-right .input-field {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#contact-right .input-field > label, #contact-right li, #contact-right .dropdown-content li > a, #contact-right .dropdown-content li > span {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
+  color: #be6e46;
+}
+#contact-right input, #contact-right select, #contact-right textarea {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
+  color: #be6e46;
+  font-weight: bold;
+}
+#contact-right .select-wrapper input.select-dropdown, #contact-right input:focus, #contact-right textarea:focus, #contact-right input, #contact-right textarea {
+  border-bottom-color: #be6e46;
+}
+
+.contact-text {
+  position: absolute;
+  top: 10vh;
+  left: 60%;
+  width: 40%;
+  color: white;
+  font-size: 1vw;
+}
+
+.contact-info {
+  font-family: "Merriweather", serif;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-size: 1.4em;
+}
+
+.contact-direct {
+  padding: 10px;
+}
+
+.contact-form {
+  padding: 10px;
+}
+.contact-form .btn {
+  font-family: "Didact Gothic", sans-serif;
+  background-color: #be6e46;
 }
 
 .parallax-interior {
-  font-family: "Merriweather", serif;
-  font-size: 1.6em;
-  position: absolute;
   bottom: 100px;
   padding-left: 40px;
+  position: absolute;
+}
+.parallax-interior p {
+  font-family: "Merriweather", serif;
+  font-size: 1.6em;
   color: white;
+  line-height: 1.5;
+  padding-bottom: 15px;
 }
 .parallax-interior .btn {
   font-family: "Didact Gothic", sans-serif;
   background-color: #be6e46;
+}
+
+#specialties {
+  background-color: rgba(196, 122, 192, 0.2);
+}
+#specialties .specialty-card {
+  min-height: 300px;
+  border: 0.5px #c47ac0 solid;
+  background-color: rgba(196, 122, 192, 0.1);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .table-of-contents a {
@@ -165,6 +234,17 @@ footer {
   vertical-align: middle;
 }
 
+.popup {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  top: 75px;
+  left: 50%;
+  margin-left: -150px;
+  background-color: grey;
+  z-index: 51;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -180,33 +260,6 @@ h2 {
 
 h3 {
   font-size: 18pt;
-}
-
-.contact-container {
-  position: relative;
-  height: 90vh;
-}
-
-.contact-text {
-  position: absolute;
-  top: 10vh;
-  left: 60%;
-  width: 40%;
-  color: white;
-  font-size: 1vw;
-}
-
-.contact-info {
-  font-family: "Merriweather", serif;
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  color: white;
-  font-size: 1.4em;
-}
-
-.contact-form, .contact-direct {
-  padding: 10px;
 }
 
 .parallaximage {

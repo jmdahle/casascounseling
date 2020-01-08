@@ -1,9 +1,50 @@
 import React from 'react';
+
 // import {BrowserRouter as Router, Link} from 'react-router-dom';
 import './App.css';
 import ContactForm from './ContactForm';
 
 class App extends React.Component {
+    state = {
+        contactInfo: {},
+        showPopUp: false,
+    }
+
+    openPopUp = () => {
+        this.setState( {showPopUp: true} );
+    }
+
+    closePopUp = () => {
+        this.setState( {showPopUp: false} );
+    }
+
+    handleSubmit = contactFormData => {
+        this.setState( {contactInfo: contactFormData} );
+        
+        let postdata =  new FormData();
+        for ( let item in contactFormData ) {
+            postdata.append(item, contactFormData[item]);
+        }
+        
+        postdata.append('service_id', 'smtp_server');
+        postdata.append('template_id', 'contact_form');
+        postdata.append('user_id', 'user_KNUNPVrJESIKhlpR0Npy4');
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send-form',{
+            method: 'POST',
+            body: postdata,
+            contentType: 'multipart/form-data',
+            processData: false // no need to parse formData to string
+            })
+            .then( (response) => {
+                console.log(response);
+            })
+            .catch( (error) => {
+                console.log(error);
+        });
+    }
+
+
     render () {
         const sections = [
             {
@@ -25,26 +66,22 @@ class App extends React.Component {
                     <div id='banner-container'>
                         <i className='tiny material-icons'>phone</i>&nbsp;888-888-8888&nbsp;|&nbsp;
                         <i className='tiny material-icons'>mail</i>&nbsp;paula@casascounseling.com&nbsp;|&nbsp;
-                        <a href='#!'>client login</a>&nbsp;
+                        <a href='#!' onClick={this.openPopUp}>client login</a>&nbsp;
                     </div>
                 </header>
+                    <PopUp showPopUp={this.state.showPopUp} closePopUp={this.closePopUp} externalLink='#!'/>
                 <main>
                     <div id='spacer' className='row'>
                         <p>&nbsp;</p>
                     </div>
                     <div className='row'>
-                        <div className='col s12 m9 l10'>
-                            <div className='parallax-container'>
-                                <div className='parallax-interior'>
-                                    <p>
-                                        Say something really profound. And then contact us button.
-                                    </p>
-                                    <a href='#!' className='btn'>Contact</a>
-                                </div>
-                                <div className='parallax'>
-                                    <img className='parallaximage' src='images/spiral-green-plants-1650921.jpg' alt=''/>
-                                </div>
-                            </div>
+                        <div id='main-container' className='col s12 m9 l10'>
+                            <ParallaxSection name='welcome' imgref='spiral-green-plants-1650921.jpg'>
+                                <p>
+                                    Say something really profound. And then contact us button.
+                                </p>
+                                <a href='#!' className='btn'>Contact</a>
+                            </ParallaxSection>
                             <PageSection name='about' title=''>
                                 <div className='row flex'>
                                     <div id='about-left' className='col s12 m12 l7'>
@@ -64,15 +101,11 @@ class App extends React.Component {
                                     </div>
                                 </div>
                             </PageSection>
-                            <div className='parallax-container'>
-                                <div className='parallax'>
-                                    <img className='parallaximage' src='images/woman-raising-her-both-hands-1786244.jpg' alt=''/>
-                                </div>
-                            </div>
+                            <ParallaxSection name='break-1' imgref='woman-raising-her-both-hands-1786244.jpg'/>
                             <PageSection name='contact' title=''>
                                 <div className='row flex'>
-                                    <div id='contact-left' className='col s12 m5 l5 contact-container'>
-                                    <div className='contact-direct'>
+                                    <div id='contact-left' className='col s12 m5 l5'>
+                                        <div className='contact-direct'>
                                             <h3>Contact directly by phone or email</h3>
                                             <ul>
                                                 <li>
@@ -87,15 +120,11 @@ class App extends React.Component {
                                         </div>
                                     </div>
                                     <div id='contact-right' className='col s12 m7 l7'>
-                                        <ContactForm />
+                                        <ContactForm handleSubmit={this.handleSubmit} />
                                     </div>
                                 </div>
                             </PageSection>
-                            <div className='parallax-container'>
-                                <div className='parallax'>
-                                    <img className='parallaximage' src='images/gen1.jpg' alt=''/>
-                                </div>
-                            </div>
+                            <ParallaxSection name='break2' imgref='gen1.jpg' />
                             <PageSection name='specialties' title='Specialties'>
                                 <div className='row'>
                                     <SpecialtyCard name='grief_and_loss' title='Grief and Loss'>
@@ -125,7 +154,25 @@ class App extends React.Component {
                     </div>
                 </main>
                 <footer className='footer-wrapper'>
-
+                    <div className="row">
+                        <div className="col l6 s12">
+                                <h5 className="grey-text">Footer Content</h5>
+                                <p className="grey-text text-darken-4">You can use rows and columns here to organize your footer content.</p>
+                        </div>
+                        <div className="col l4 offset-l2 s12">
+                                <h5 className="grey-text">Links</h5>
+                                <ul>
+                                <li><a className="grey-text text-darken-3" href="#!">Link 1</a></li>
+                                <li><a className="grey-text text-darken-3" href="#!">Link 2</a></li>
+                                <li><a className="grey-text text-darken-3" href="#!">Link 3</a></li>
+                                <li><a className="grey-text text-darken-3" href="#!">Link 4</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div className="footer-copyright">
+                        &copy; 2020 Paula Casas, LCSW PC
+                        <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
                 </footer>
             </div>
         );
@@ -142,7 +189,7 @@ const Nav = (props) => {
     })
   return (
     <div id='toc-wrapper'>
-      <ul className="section table-of-contents">
+      <ul className='section table-of-contents'>
           {listitems}
       </ul>      
     </div>
@@ -162,19 +209,68 @@ const PageSection = (props) => {
     )
 }
 
+const ParallaxSection = (props) => {
+    const imageReference = 'images/' + props.imgref
+    return (
+        <div id={props.name} className='parallax-container'>
+            <div className='parallax-interior'>
+                    {props.children}
+            </div>
+            <div className='parallax'>
+                <img className='parallaximage' src={imageReference} alt=''/>
+            </div>
+        </div>
+    )
+}
+
 const SpecialtyCard = (props) => {
     return (
-            <div className='col s12 m6 l6'>
+        <div className='col s12 m6 l3'>
             <div id={props.name} className='specialty-card'>
-                <h2>
+                <h3>
                     {props.title}
-                </h2>
+                </h3>
                 <div>
                     {props.children}
                 </div>
             </div>
         </div>
     )
+}
+
+const PopUp = (props) => {
+    if (props.showPopUp === false) {
+        return (
+            <span></span>
+        )
+    }
+    else {
+        return (
+            <div className='popup'>
+                <div className='row'>
+                    <div className='col s12 m12 l12'>
+                        <h3>Notice</h3>
+                        <div>
+                            <p>
+                                You are about to leave casascounseling.com to use our secure patient portal.  You can use the patient portal to view or schedule appointments, review billing information in a secure, HIPAA-compliant manner. For your convenience, the poral will open in a new window.
+                            </p>
+                            <p>
+                                Click 'continue' to access the portal.  Or click 'Close' to close this message box.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col s6'>
+                        <a className='btn' onClick={props.closePopUp}>Close</a>
+                    </div>
+                    <div className='col s6'>
+                        <a href={props.externalLink} target='_blank' className='btn'>Continue</a>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default App;

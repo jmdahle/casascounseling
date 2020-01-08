@@ -3,6 +3,9 @@
 # development notes
 /notes
 
+# environment variables
+.env
+
 # dependencies
 /node_modules
 /.pnp

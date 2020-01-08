@@ -14,7 +14,8 @@ $navigationfont: 'Didact Gothic', sans-serif;
 $color0: rgba(0,0,0,1);
 $color1: rgba(190, 110, 70, 1);
 $color2: rgba(209, 239, 181, 1); /* hex: #d1efb5 */
-$color3: rgba(114, 134, 160, 1);
+// $color3: rgba(114, 134, 160, 1); traded out for a pink-ish color
+$color3: rgba(196,122,192,1);
 $color4: rgba(63, 124, 172, 1); /* hex: #3f7cac */
 $color5: rgba(149, 175, 186, 1);
 /* Color Assignments */
@@ -64,7 +65,8 @@ main {
 }
 
 footer {
-    font-family: $navigationfont;
+    position: relative;
+    margin-top: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;    font-family: $navigationfont;
 }
 
 #banner-container {
@@ -105,6 +107,7 @@ footer {
     }
 }
 
+
 #about-left {
     background-color: rgba($color5, 65%);
     padding: 14px;
@@ -139,20 +142,87 @@ footer {
 
 #contact-right {
     background-color: $color2;
+    position: relative;      
+    .input-field {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    padding-bottom: 10px;
+    .input-field>label, li, .dropdown-content li>a, .dropdown-content li>span {
+        font-family: $navigationfont;
+        font-size: .85rem;
+        color: $secondary-color;
+    }
+    input, select, textarea {
+        font-family: $navigationfont;
+        font-size: .85rem;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+    .select-wrapper input.select-dropdown, input:focus, textarea:focus, input, textarea {
+        border-bottom-color: $secondary-color;
+    }
 }
 
-.parallax-interior {
-    font-family: $bodyfont;
-    font-size: 1.6em;
+.contact-text {
     position: absolute;
-    bottom: 100px;
-    padding-left: 40px;
+    top: 10vh;
+    left: 60%;
+    width: 40%;
     color: white;
+    font-size: 1vw;
+}
+  
+.contact-info {
+    font-family: $bodyfont;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 1.4em;
+}
 
+.contact-direct {
+    padding: 10px;
+}
+
+.contact-form {
     .btn {
         font-family: $navigationfont;
         background-color: $secondary-color;
     }
+    padding: 10px;
+}
+
+.parallax-interior {
+    bottom: 100px;
+    padding-left: 40px;
+    position: absolute;
+    p {
+        font-family: $bodyfont;
+        font-size: 1.6em;    
+        color: white;
+        line-height: 1.5;
+        padding-bottom: 15px;
+    }
+    .btn {
+        font-family: $navigationfont;
+        background-color: $secondary-color;
+    }
+}
+
+#specialties {
+    background-color: rgba($color3, 20%);
+
+    .specialty-card {
+        min-height: 300px;
+        border: .5px $color3 solid;
+        background-color: rgba($color3, 10%);
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: .5em;
+        margin-bottom: .5em; 
+    }    
 }
 
 .table-of-contents {
@@ -197,6 +267,17 @@ footer {
     }
 }
 
+.popup {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 75px;
+    left: 50%;
+    margin-left: -150px;
+    background-color: grey;
+    z-index: 51;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -214,34 +295,10 @@ h3 {
     font-size: $h1-font-size - 2 * $hx-font-size-xdiff;
 }
 
-.contact-container {
-    position: relative;
-    height: 90vh;
-}
-  
+
 
   
-.contact-text {
-    position: absolute;
-    top: 10vh;
-    left: 60%;
-    width: 40%;
-    color: white;
-    font-size: 1vw;
-}
-  
-.contact-info {
-    font-family: $bodyfont;
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    color: white;
-    font-size: 1.4em;
-}
 
-.contact-form, .contact-direct {
-    padding: 10px;
-}
 
 .parallaximage {
     width: 100%;
