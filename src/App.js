@@ -18,6 +18,11 @@ class App extends React.Component {
         this.setState( {showPopUp: false} );
     }
 
+    openNewTab = (link) => {
+        this.closePopUp();
+        window.open(link, '_blank')
+    }
+
     handleSubmit = contactFormData => {
         this.setState( {contactInfo: contactFormData} );
         
@@ -69,18 +74,19 @@ class App extends React.Component {
                         <a href='#!' onClick={this.openPopUp}>client login</a>&nbsp;
                     </div>
                 </header>
-                    <PopUp showPopUp={this.state.showPopUp} closePopUp={this.closePopUp} externalLink='#!'/>
+                    <PopUp 
+                        showPopUp={this.state.showPopUp} 
+                        closePopUp={this.closePopUp} 
+                        openNewTab={this.openNewTab}
+                        externalLink='#!'/>
                 <main>
-                    <div id='spacer' className='row'>
-                        <p>&nbsp;</p>
-                    </div>
                     <div className='row'>
                         <div id='main-container' className='col s12 m9 l10'>
                             <ParallaxSection name='welcome' imgref='spiral-green-plants-1650921.jpg'>
                                 <p>
                                     Say something really profound. And then contact us button.
                                 </p>
-                                <a href='#!' className='btn'>Contact</a>
+                                <a href='#contact' className='btn'>Contact</a>
                             </ParallaxSection>
                             <PageSection name='about' title=''>
                                 <div className='row flex'>
@@ -144,7 +150,6 @@ class App extends React.Component {
                         </div>
                         <div id='sidebar-container' className='col hide-on-small-only l2'>
                             <div id='sticky-container'>
-                                <p>spacer</p>
                                 <div id='sticky' className='pushpin'>
                                     <img className='' src='images/casas_counseling_logo.png' alt=''/>
                                     < Nav menuitems={sections} />
@@ -262,10 +267,10 @@ const PopUp = (props) => {
                 </div>
                 <div className='row'>
                     <div className='col s6'>
-                        <a className='btn' onClick={props.closePopUp}>Close</a>
+                        <a className='btn' onClick={() => props.closePopUp()}>Close</a>
                     </div>
                     <div className='col s6'>
-                        <a href={props.externalLink} target='_blank' className='btn'>Continue</a>
+                        <a className='btn' onClick={ () => props.openNewTab(props.externalLink)}>Continue</a>
                     </div>
                 </div>
             </div>

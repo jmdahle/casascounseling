@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //Materialize pushpin
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.pushpin');
-    let options = {top: 171, offset: 43};
+    let options = {top: 43, offset: 43};
     let instances = M.Pushpin.init(elems, options);
 });
 
-//Materials select
+//Materialize select
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     let options = {};
