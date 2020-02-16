@@ -1,0 +1,279 @@
+/* Fonts */
+/* alternative  fonts */
+/*
+$bodyfont: 'Dosis', sans-serif;
+$bodyfont: 'PT Serif', serif;
+$headingfont: 'Rubik', sans-serif;
+$headingfont: 'Dosis', sans-serif;
+*/
+/* RGB */
+/* hex: #d1efb5 */
+/* hex: #3f7cac */
+/* Color Assignments */
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.col {
+  padding: 0px;
+  margin: 0px;
+}
+
+.row .col {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col .row {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 30pt;
+  z-index: 50;
+}
+
+main {
+  position: relative;
+  top: 30pt;
+}
+
+footer {
+  position: relative;
+  margin-top: 30pt;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+#banner-container {
+  background-color: #3f7cac;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.75rem;
+  color: white;
+  text-align: right;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 30pt;
+}
+#banner-container i {
+  vertical-align: -3px;
+}
+#banner-container a {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: bold;
+}
+#banner-container a:link, #banner-container a:visited, #banner-container a:active {
+  color: #d1efb5;
+}
+#banner-container a:hover {
+  text-decoration: underline;
+}
+
+#sidebar-container {
+  padding-left: 10px;
+}
+#sidebar-container img {
+  width: 100%;
+  max-width: 220px;
+}
+
+#about-left {
+  background-color: rgba(149, 175, 186, 0.65);
+  padding: 14px;
+  line-height: 1.5;
+}
+#about-left p {
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+#about-right {
+  background-color: #95afba;
+  justify-content: center;
+  position: relative;
+}
+#about-right img {
+  width: 85%;
+  object-fit: cover;
+  padding: 5px;
+}
+#about-right p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
+
+#contact-left {
+  background-color: rgba(209, 239, 181, 0.65);
+}
+
+#contact-right {
+  background-color: #d1efb5;
+  position: relative;
+  padding-bottom: 10px;
+}
+#contact-right .input-field {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#contact-right .input-field > label, #contact-right li, #contact-right .dropdown-content li > a, #contact-right .dropdown-content li > span {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
+  color: #be6e46;
+}
+#contact-right input, #contact-right select, #contact-right textarea {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
+  color: #be6e46;
+  font-weight: bold;
+}
+#contact-right .select-wrapper input.select-dropdown, #contact-right input:focus, #contact-right textarea:focus, #contact-right input, #contact-right textarea {
+  border-bottom-color: #be6e46;
+}
+
+.contact-text {
+  position: absolute;
+  top: 10vh;
+  left: 60%;
+  width: 40%;
+  color: white;
+  font-size: 1vw;
+}
+
+.contact-info {
+  font-family: "Merriweather", serif;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-size: 1.4em;
+}
+
+.contact-direct {
+  padding: 10px;
+}
+
+.contact-form {
+  padding: 10px;
+}
+.contact-form .btn {
+  font-family: "Didact Gothic", sans-serif;
+  background-color: #be6e46;
+}
+
+.parallax-interior {
+  bottom: 100px;
+  padding-left: 40px;
+  position: absolute;
+}
+.parallax-interior p {
+  font-family: "Merriweather", serif;
+  font-size: 1.6em;
+  color: white;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+.parallax-interior .btn {
+  font-family: "Didact Gothic", sans-serif;
+  background-color: #be6e46;
+}
+
+#specialties {
+  background-color: rgba(196, 122, 192, 0.2);
+}
+#specialties .specialty-card {
+  min-height: 300px;
+  border: 0.5px #c47ac0 solid;
+  background-color: rgba(196, 122, 192, 0.1);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.table-of-contents a {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.table-of-contents a:link, .table-of-contents a:visited, .table-of-contents a:active {
+  color: #3f7cac;
+}
+.table-of-contents a.active {
+  font-weight: bold;
+  padding-left: 14px;
+  border-left: 2px solid #be6e46;
+}
+.table-of-contents a:hover {
+  color: #be6e46;
+  padding-left: 15px;
+  border-left: 1px solid #3f7cac;
+}
+
+.section {
+  padding: 0px;
+}
+.section p {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+}
+.section li {
+  font-family: "Merriweather", serif;
+  vertical-align: middle;
+}
+
+.popup {
+  position: fixed;
+  width: 50vw;
+  top: 75px;
+  left: 50%;
+  margin-left: -25vw;
+  background-color: grey;
+  opacity: 90%;
+  padding: 1rem;
+  z-index: 51;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+.parallaximage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.pin-top, .pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/casascounseling/static/css/main.2daecb09.chunk.css",
+    "main.js": "/casascounseling/static/js/main.164e0204.chunk.js",
+    "main.js.map": "/casascounseling/static/js/main.164e0204.chunk.js.map",
+    "runtime-main.js": "/casascounseling/static/js/runtime-main.bf4c9979.js",
+    "runtime-main.js.map": "/casascounseling/static/js/runtime-main.bf4c9979.js.map",
+    "static/js/2.05c8d15f.chunk.js": "/casascounseling/static/js/2.05c8d15f.chunk.js",
+    "static/js/2.05c8d15f.chunk.js.map": "/casascounseling/static/js/2.05c8d15f.chunk.js.map",
+    "index.html": "/casascounseling/index.html",
+    "precache-manifest.1545d388d5b5941dccf94c82e8423f68.js": "/casascounseling/precache-manifest.1545d388d5b5941dccf94c82e8423f68.js",
+    "service-worker.js": "/casascounseling/service-worker.js",
+    "static/css/main.2daecb09.chunk.css.map": "/casascounseling/static/css/main.2daecb09.chunk.css.map",
+    "static/js/2.05c8d15f.chunk.js.LICENSE": "/casascounseling/static/js/2.05c8d15f.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf4c9979.js",
+    "static/js/2.05c8d15f.chunk.js",
+    "static/css/main.2daecb09.chunk.css",
+    "static/js/main.164e0204.chunk.js"
+  ]
+}

@@ -1,0 +1,317 @@
+/* Fonts */
+$bodyfont: 'Merriweather', serif;
+/* alternative  fonts */
+/*
+$bodyfont: 'Dosis', sans-serif;
+$bodyfont: 'PT Serif', serif;
+$headingfont: 'Rubik', sans-serif;
+$headingfont: 'Dosis', sans-serif;
+*/
+$headingfont: 'Rubik', sans-serif;
+$navigationfont: 'Didact Gothic', sans-serif;
+
+/* RGB */
+$color0: rgba(0,0,0,1);
+$color1: rgba(190, 110, 70, 1);
+$color2: rgba(209, 239, 181, 1); /* hex: #d1efb5 */
+// $color3: rgba(114, 134, 160, 1); traded out for a pink-ish color
+$color3: rgba(196,122,192,1);
+$color4: rgba(63, 124, 172, 1); /* hex: #3f7cac */
+$color5: rgba(149, 175, 186, 1);
+/* Color Assignments */
+$textcolor: $color0;
+$primary-color: $color4 !default;
+$secondary-color: $color1 !default;
+$alternate-primary-color: $color2;
+$alternate-secondary-color: $color1;
+$alternate-bgcolor: $color2;
+
+$h1-font-size: 30pt;
+$hx-font-size-xdiff: 6pt;
+
+$banner-padding: 4px;
+
+.row {
+    margin: 0px;
+    padding: 0px;
+
+}
+.col {
+    padding: 0px;
+    margin: 0px;
+}
+
+.row .col {
+    padding: 0px;
+    margin: 0px;
+}
+
+.col .row {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+    z-index: 50;
+}
+
+main {
+    position: relative;
+    top: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+}
+
+footer {
+    position: relative;
+    margin-top: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;    font-family: $navigationfont;
+}
+
+#banner-container {
+    background-color: $primary-color;
+    font-family: $navigationfont;
+    font-size: .75rem;
+    color: white;
+    text-align: right;
+    padding-top: $banner-padding;
+    padding-bottom: $banner-padding;
+    padding-left: 2 * $banner-padding;
+    padding-right: 2 * $banner-padding;
+    height: $h1-font-size - $hx-font-size-xdiff + 2 * $banner-padding;
+
+    i {
+        vertical-align: -3px;
+    }
+
+    a {
+        font-family: $navigationfont;
+        font-weight: bold;    
+    }
+
+    a:link, a:visited, a:active {
+        color: $alternate-primary-color;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#sidebar-container {
+    padding-left: 10px;
+    img {
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
+
+#about-left {
+    background-color: rgba($color5, 65%);
+    padding: 14px;
+    line-height: 1.5;
+    p {
+        color: rgba(#000000,65%);
+        margin-bottom: 10px;
+        font-size: .85rem;    
+    }
+}
+
+#about-right {
+    background-color: $color5;
+    justify-content: center;
+    position: relative;
+        img {
+        width: 85%;
+        object-fit: cover;
+        padding: 5px;
+    }
+    p {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+    }
+}
+
+#contact-left {
+    background-color: rgba($color2,65%);
+}
+
+#contact-right {
+    background-color: $color2;
+    position: relative;      
+    .input-field {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    padding-bottom: 10px;
+    .input-field>label, li, .dropdown-content li>a, .dropdown-content li>span {
+        font-family: $navigationfont;
+        font-size: .85rem;
+        color: $secondary-color;
+    }
+    input, select, textarea {
+        font-family: $navigationfont;
+        font-size: .85rem;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+    .select-wrapper input.select-dropdown, input:focus, textarea:focus, input, textarea {
+        border-bottom-color: $secondary-color;
+    }
+}
+
+.contact-text {
+    position: absolute;
+    top: 10vh;
+    left: 60%;
+    width: 40%;
+    color: white;
+    font-size: 1vw;
+}
+  
+.contact-info {
+    font-family: $bodyfont;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 1.4em;
+}
+
+.contact-direct {
+    padding: 10px;
+}
+
+.contact-form {
+    .btn {
+        font-family: $navigationfont;
+        background-color: $secondary-color;
+    }
+    padding: 10px;
+}
+
+.parallax-interior {
+    bottom: 100px;
+    padding-left: 40px;
+    position: absolute;
+    p {
+        font-family: $bodyfont;
+        font-size: 1.6em;    
+        color: white;
+        line-height: 1.5;
+        padding-bottom: 15px;
+    }
+    .btn {
+        font-family: $navigationfont;
+        background-color: $secondary-color;
+    }
+}
+
+#specialties {
+    background-color: rgba($color3, 20%);
+
+    .specialty-card {
+        min-height: 300px;
+        border: .5px $color3 solid;
+        background-color: rgba($color3, 10%);
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: .5em;
+        margin-bottom: .5em; 
+    }    
+}
+
+.table-of-contents {
+    a {
+        font-family: $navigationfont;
+        font-size: .85rem;
+        font-weight: bold;    
+    }
+
+    a:link, a:visited, a:active {
+        color: $primary-color;
+    }
+
+    a.active {
+        font-weight: bold;
+        padding-left: 14px;
+        border-left: 2px solid $secondary-color;
+    }
+
+    a:hover {
+        color: $secondary-color;
+        padding-left: 15px;
+        border-left: 1px solid $primary-color;            
+    }
+}
+
+.section {
+    padding: 0px;
+    p {
+        font-family: $bodyfont;
+        font-size: 1rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $headingfont;
+        font-weight: bold;
+    }
+
+    li {
+        font-family: $bodyfont;
+        vertical-align: middle;
+    }
+}
+
+.popup {
+    position: fixed;
+    padding: 1rem;
+    width: 50vw;
+    top: 75px;
+    left: 50%;
+    margin-left: -25vw;
+    background-color: grey;
+    opacity: 90%;
+    z-index: 51;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h1-font-size - $hx-font-size-xdiff;
+}
+
+h3 { 
+    font-size: $h1-font-size - 2 * $hx-font-size-xdiff;
+}
+
+
+
+  
+
+
+.parallaximage {
+    width: 100%;
+    object-fit: cover;
+}
+
+// Class for when element is above threshold
+.pin-top, .pin-bottom {
+    position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+    position: fixed !important;
+}
